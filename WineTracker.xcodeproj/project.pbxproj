@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		271B4B1418C91EC50037B068 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B4B1318C91EC50037B068 /* Foundation.framework */; };
+		271B4B1618C91EC50037B068 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B4B1518C91EC50037B068 /* CoreGraphics.framework */; };
+		271B4B1818C91EC50037B068 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B4B1718C91EC50037B068 /* UIKit.framework */; };
+		271B4B1E18C91EC50037B068 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 271B4B1C18C91EC50037B068 /* InfoPlist.strings */; };
+		271B4B2018C91EC50037B068 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B1F18C91EC50037B068 /* main.m */; };
+		271B4B2418C91EC50037B068 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B2318C91EC50037B068 /* AppDelegate.m */; };
+		271B4B2718C91EC50037B068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271B4B2518C91EC50037B068 /* Main.storyboard */; };
+		271B4B2A18C91EC50037B068 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B2918C91EC50037B068 /* MasterViewController.m */; };
+		271B4B2D18C91EC50037B068 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B2C18C91EC50037B068 /* DetailViewController.m */; };
+		271B4B2F18C91EC50037B068 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 271B4B2E18C91EC50037B068 /* Images.xcassets */; };
+		271B4B3618C91EC50037B068 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B4B3518C91EC50037B068 /* XCTest.framework */; };
+		271B4B3718C91EC50037B068 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B4B1318C91EC50037B068 /* Foundation.framework */; };
+		271B4B3818C91EC50037B068 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B4B1718C91EC50037B068 /* UIKit.framework */; };
+		271B4B4018C91EC50037B068 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 271B4B3E18C91EC50037B068 /* InfoPlist.strings */; };
+		271B4B4218C91EC50037B068 /* WineTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B4118C91EC50037B068 /* WineTrackerTests.m */; };
+		271B4B4E18C920990037B068 /* Wine.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B4D18C920990037B068 /* Wine.m */; };
+		271B4B5018C92DF20037B068 /* ToastedHeadChardonnay-sm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 271B4B4F18C92DF20037B068 /* ToastedHeadChardonnay-sm.jpg */; };
+		271B4B5318C92F6E0037B068 /* WineListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B5218C92F6E0037B068 /* WineListCell.m */; };
+		271B4B5618C939E10037B068 /* WineAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B5518C939E10037B068 /* WineAddViewController.m */; };
+		271B4B5918C93D140037B068 /* AddWineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B5818C93D140037B068 /* AddWineView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		271B4B3918C91EC50037B068 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 271B4B0818C91EC50037B068 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 271B4B0F18C91EC50037B068;
+			remoteInfo = WineTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		271B4B1018C91EC50037B068 /* WineTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		271B4B1318C91EC50037B068 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		271B4B1518C91EC50037B068 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		271B4B1718C91EC50037B068 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		271B4B1B18C91EC50037B068 /* WineTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WineTracker-Info.plist"; sourceTree = "<group>"; };
+		271B4B1D18C91EC50037B068 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		271B4B1F18C91EC50037B068 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		271B4B2118C91EC50037B068 /* WineTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WineTracker-Prefix.pch"; sourceTree = "<group>"; };
+		271B4B2218C91EC50037B068 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		271B4B2318C91EC50037B068 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		271B4B2618C91EC50037B068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		271B4B2818C91EC50037B068 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		271B4B2918C91EC50037B068 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		271B4B2B18C91EC50037B068 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		271B4B2C18C91EC50037B068 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		271B4B2E18C91EC50037B068 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		271B4B3418C91EC50037B068 /* WineTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WineTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		271B4B3518C91EC50037B068 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		271B4B3D18C91EC50037B068 /* WineTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WineTrackerTests-Info.plist"; sourceTree = "<group>"; };
+		271B4B3F18C91EC50037B068 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		271B4B4118C91EC50037B068 /* WineTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WineTrackerTests.m; sourceTree = "<group>"; };
+		271B4B4C18C920990037B068 /* Wine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wine.h; sourceTree = "<group>"; };
+		271B4B4D18C920990037B068 /* Wine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wine.m; sourceTree = "<group>"; };
+		271B4B4F18C92DF20037B068 /* ToastedHeadChardonnay-sm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ToastedHeadChardonnay-sm.jpg"; sourceTree = "<group>"; };
+		271B4B5118C92F6E0037B068 /* WineListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineListCell.h; sourceTree = "<group>"; };
+		271B4B5218C92F6E0037B068 /* WineListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineListCell.m; sourceTree = "<group>"; };
+		271B4B5418C939E10037B068 /* WineAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineAddViewController.h; sourceTree = "<group>"; };
+		271B4B5518C939E10037B068 /* WineAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineAddViewController.m; sourceTree = "<group>"; };
+		271B4B5718C93D140037B068 /* AddWineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWineView.h; sourceTree = "<group>"; };
+		271B4B5818C93D140037B068 /* AddWineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWineView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		271B4B0D18C91EC50037B068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271B4B1618C91EC50037B068 /* CoreGraphics.framework in Frameworks */,
+				271B4B1818C91EC50037B068 /* UIKit.framework in Frameworks */,
+				271B4B1418C91EC50037B068 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		271B4B3118C91EC50037B068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271B4B3618C91EC50037B068 /* XCTest.framework in Frameworks */,
+				271B4B3818C91EC50037B068 /* UIKit.framework in Frameworks */,
+				271B4B3718C91EC50037B068 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		271B4B0718C91EC50037B068 = {
+			isa = PBXGroup;
+			children = (
+				271B4B1918C91EC50037B068 /* WineTracker */,
+				271B4B3B18C91EC50037B068 /* WineTrackerTests */,
+				271B4B1218C91EC50037B068 /* Frameworks */,
+				271B4B1118C91EC50037B068 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		271B4B1118C91EC50037B068 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				271B4B1018C91EC50037B068 /* WineTracker.app */,
+				271B4B3418C91EC50037B068 /* WineTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		271B4B1218C91EC50037B068 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				271B4B1318C91EC50037B068 /* Foundation.framework */,
+				271B4B1518C91EC50037B068 /* CoreGraphics.framework */,
+				271B4B1718C91EC50037B068 /* UIKit.framework */,
+				271B4B3518C91EC50037B068 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		271B4B1918C91EC50037B068 /* WineTracker */ = {
+			isa = PBXGroup;
+			children = (
+				271B4B4B18C920200037B068 /* Model */,
+				271B4B2218C91EC50037B068 /* AppDelegate.h */,
+				271B4B2318C91EC50037B068 /* AppDelegate.m */,
+				271B4B2518C91EC50037B068 /* Main.storyboard */,
+				271B4B2818C91EC50037B068 /* MasterViewController.h */,
+				271B4B2918C91EC50037B068 /* MasterViewController.m */,
+				271B4B2B18C91EC50037B068 /* DetailViewController.h */,
+				271B4B2C18C91EC50037B068 /* DetailViewController.m */,
+				271B4B2E18C91EC50037B068 /* Images.xcassets */,
+				271B4B1A18C91EC50037B068 /* Supporting Files */,
+				271B4B5118C92F6E0037B068 /* WineListCell.h */,
+				271B4B5218C92F6E0037B068 /* WineListCell.m */,
+				271B4B5418C939E10037B068 /* WineAddViewController.h */,
+				271B4B5518C939E10037B068 /* WineAddViewController.m */,
+				271B4B5718C93D140037B068 /* AddWineView.h */,
+				271B4B5818C93D140037B068 /* AddWineView.m */,
+			);
+			path = WineTracker;
+			sourceTree = "<group>";
+		};
+		271B4B1A18C91EC50037B068 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				271B4B4F18C92DF20037B068 /* ToastedHeadChardonnay-sm.jpg */,
+				271B4B1B18C91EC50037B068 /* WineTracker-Info.plist */,
+				271B4B1C18C91EC50037B068 /* InfoPlist.strings */,
+				271B4B1F18C91EC50037B068 /* main.m */,
+				271B4B2118C91EC50037B068 /* WineTracker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		271B4B3B18C91EC50037B068 /* WineTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				271B4B4118C91EC50037B068 /* WineTrackerTests.m */,
+				271B4B3C18C91EC50037B068 /* Supporting Files */,
+			);
+			path = WineTrackerTests;
+			sourceTree = "<group>";
+		};
+		271B4B3C18C91EC50037B068 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				271B4B3D18C91EC50037B068 /* WineTrackerTests-Info.plist */,
+				271B4B3E18C91EC50037B068 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		271B4B4B18C920200037B068 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				271B4B4C18C920990037B068 /* Wine.h */,
+				271B4B4D18C920990037B068 /* Wine.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		271B4B0F18C91EC50037B068 /* WineTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 271B4B4518C91EC50037B068 /* Build configuration list for PBXNativeTarget "WineTracker" */;
+			buildPhases = (
+				271B4B0C18C91EC50037B068 /* Sources */,
+				271B4B0D18C91EC50037B068 /* Frameworks */,
+				271B4B0E18C91EC50037B068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WineTracker;
+			productName = WineTracker;
+			productReference = 271B4B1018C91EC50037B068 /* WineTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		271B4B3318C91EC50037B068 /* WineTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 271B4B4818C91EC50037B068 /* Build configuration list for PBXNativeTarget "WineTrackerTests" */;
+			buildPhases = (
+				271B4B3018C91EC50037B068 /* Sources */,
+				271B4B3118C91EC50037B068 /* Frameworks */,
+				271B4B3218C91EC50037B068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				271B4B3A18C91EC50037B068 /* PBXTargetDependency */,
+			);
+			name = WineTrackerTests;
+			productName = WineTrackerTests;
+			productReference = 271B4B3418C91EC50037B068 /* WineTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		271B4B0818C91EC50037B068 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Bad Wolf Inc";
+				TargetAttributes = {
+					271B4B3318C91EC50037B068 = {
+						TestTargetID = 271B4B0F18C91EC50037B068;
+					};
+				};
+			};
+			buildConfigurationList = 271B4B0B18C91EC50037B068 /* Build configuration list for PBXProject "WineTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 271B4B0718C91EC50037B068;
+			productRefGroup = 271B4B1118C91EC50037B068 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				271B4B0F18C91EC50037B068 /* WineTracker */,
+				271B4B3318C91EC50037B068 /* WineTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		271B4B0E18C91EC50037B068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271B4B2F18C91EC50037B068 /* Images.xcassets in Resources */,
+				271B4B5018C92DF20037B068 /* ToastedHeadChardonnay-sm.jpg in Resources */,
+				271B4B1E18C91EC50037B068 /* InfoPlist.strings in Resources */,
+				271B4B2718C91EC50037B068 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		271B4B3218C91EC50037B068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271B4B4018C91EC50037B068 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		271B4B0C18C91EC50037B068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271B4B5318C92F6E0037B068 /* WineListCell.m in Sources */,
+				271B4B4E18C920990037B068 /* Wine.m in Sources */,
+				271B4B2418C91EC50037B068 /* AppDelegate.m in Sources */,
+				271B4B2A18C91EC50037B068 /* MasterViewController.m in Sources */,
+				271B4B2018C91EC50037B068 /* main.m in Sources */,
+				271B4B2D18C91EC50037B068 /* DetailViewController.m in Sources */,
+				271B4B5618C939E10037B068 /* WineAddViewController.m in Sources */,
+				271B4B5918C93D140037B068 /* AddWineView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		271B4B3018C91EC50037B068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271B4B4218C91EC50037B068 /* WineTrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		271B4B3A18C91EC50037B068 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 271B4B0F18C91EC50037B068 /* WineTracker */;
+			targetProxy = 271B4B3918C91EC50037B068 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		271B4B1C18C91EC50037B068 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				271B4B1D18C91EC50037B068 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		271B4B2518C91EC50037B068 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				271B4B2618C91EC50037B068 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		271B4B3E18C91EC50037B068 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				271B4B3F18C91EC50037B068 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		271B4B4318C91EC50037B068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		271B4B4418C91EC50037B068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		271B4B4618C91EC50037B068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WineTracker/WineTracker-Prefix.pch";
+				INFOPLIST_FILE = "WineTracker/WineTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		271B4B4718C91EC50037B068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WineTracker/WineTracker-Prefix.pch";
+				INFOPLIST_FILE = "WineTracker/WineTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		271B4B4918C91EC50037B068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WineTracker.app/WineTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WineTracker/WineTracker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WineTrackerTests/WineTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		271B4B4A18C91EC50037B068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WineTracker.app/WineTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WineTracker/WineTracker-Prefix.pch";
+				INFOPLIST_FILE = "WineTrackerTests/WineTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		271B4B0B18C91EC50037B068 /* Build configuration list for PBXProject "WineTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				271B4B4318C91EC50037B068 /* Debug */,
+				271B4B4418C91EC50037B068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		271B4B4518C91EC50037B068 /* Build configuration list for PBXNativeTarget "WineTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				271B4B4618C91EC50037B068 /* Debug */,
+				271B4B4718C91EC50037B068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		271B4B4818C91EC50037B068 /* Build configuration list for PBXNativeTarget "WineTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				271B4B4918C91EC50037B068 /* Debug */,
+				271B4B4A18C91EC50037B068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 271B4B0818C91EC50037B068 /* Project object */;
+}
