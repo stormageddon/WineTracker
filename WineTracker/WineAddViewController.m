@@ -8,12 +8,14 @@
 
 #import "WineAddViewController.h"
 #import "Wine.h"
+#import "CameraControllerViewController.h"
 
 @interface WineAddViewController ()
 
 @end
 
 @implementation WineAddViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,7 +38,10 @@
 	// Do any additional setup after loading the view.
     
     UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction)];
-    self.navigationItem.rightBarButtonItem = saveButton;
+    self.navigationItem.leftBarButtonItem = saveButton;
+ 
+    UIBarButtonItem *cameraBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePicture:)];
+    [[self navigationItem] setRightBarButtonItem:cameraBarButtonItem];
     
 }
 
@@ -54,10 +59,37 @@
     NSString *regionName = self.regionTextField.text;
     float price = [self.priceTextField.text floatValue];
     
-    Wine *wineToSave = [[Wine alloc] initWithName:wineName grapeName:grapeName region:regionName price:price];
+    //UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    Wine *wineToSave = [[Wine alloc] initWithName:wineName grapeName:grapeName region:regionName price:price image:[self.imageView image]];
     
     //NSString *itemToPassBack = @"Pass this value back to ViewControllerA";
     [self.delegate addItemViewController:self didFinishSavingItem:wineToSave];
 }
+
+- (void)takePicture:(id) sender {
+   
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    }
+    else {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    }
+
+    [imagePicker setDelegate:self];
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    
+    [self.imageView setImage:image];
+    
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 
 @end

@@ -27,6 +27,7 @@
 		271B4B5318C92F6E0037B068 /* WineListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B5218C92F6E0037B068 /* WineListCell.m */; };
 		271B4B5618C939E10037B068 /* WineAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B5518C939E10037B068 /* WineAddViewController.m */; };
 		271B4B5918C93D140037B068 /* AddWineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B5818C93D140037B068 /* AddWineView.m */; };
+		271B4B5C18C96B790037B068 /* CameraControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B5B18C96B790037B068 /* CameraControllerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		271B4B5518C939E10037B068 /* WineAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineAddViewController.m; sourceTree = "<group>"; };
 		271B4B5718C93D140037B068 /* AddWineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWineView.h; sourceTree = "<group>"; };
 		271B4B5818C93D140037B068 /* AddWineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWineView.m; sourceTree = "<group>"; };
+		271B4B5A18C96B790037B068 /* CameraControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraControllerViewController.h; sourceTree = "<group>"; };
+		271B4B5B18C96B790037B068 /* CameraControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraControllerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				271B4B5518C939E10037B068 /* WineAddViewController.m */,
 				271B4B5718C93D140037B068 /* AddWineView.h */,
 				271B4B5818C93D140037B068 /* AddWineView.m */,
+				271B4B5A18C96B790037B068 /* CameraControllerViewController.h */,
+				271B4B5B18C96B790037B068 /* CameraControllerViewController.m */,
 			);
 			path = WineTracker;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				271B4B2D18C91EC50037B068 /* DetailViewController.m in Sources */,
 				271B4B5618C939E10037B068 /* WineAddViewController.m in Sources */,
 				271B4B5918C93D140037B068 /* AddWineView.m in Sources */,
+				271B4B5C18C96B790037B068 /* CameraControllerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

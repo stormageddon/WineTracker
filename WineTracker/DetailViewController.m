@@ -36,6 +36,8 @@
         self.regionDetailLabel.text = [self.detailItem region];
         self.grapeDetailLabel.text = [self.detailItem grapeName];
         self.priceDetailLabel.text = [NSString stringWithFormat:@"$%.2f",[self.detailItem price]];
+        [self.imageView setImage:[self.detailItem image]];
+        
     }
 }
 

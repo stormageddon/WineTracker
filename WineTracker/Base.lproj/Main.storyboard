@@ -139,6 +139,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eV-5h-Ssf">
+                                <rect key="frame" x="78" y="283" width="165" height="276"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <connections>
@@ -151,6 +155,7 @@
                     <navigationItem key="navigationItem" id="kmD-Hs-9xx"/>
                     <connections>
                         <outlet property="grapeNameTextfield" destination="VQv-SL-PgZ" id="CXf-DZ-7Vd"/>
+                        <outlet property="imageView" destination="0eV-5h-Ssf" id="FXR-Fo-BoK"/>
                         <outlet property="nameTextField" destination="j4G-lR-Zzc" id="UKG-rA-3KP"/>
                         <outlet property="priceTextField" destination="AGR-xb-dFZ" id="xh3-53-rKq"/>
                         <outlet property="regionTextField" destination="1iO-pL-Dis" id="Odt-rD-kaN"/>
@@ -159,6 +164,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VND-lv-yYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="750"/>
+        </scene>
+        <!--Camera Controller View Controller-->
+        <scene sceneID="5Ce-lN-jJi">
+            <objects>
+                <viewController storyboardIdentifier="CameraControllerViewController" id="44a-I9-SaN" customClass="CameraControllerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dDH-Vj-k5x"/>
+                        <viewControllerLayoutGuide type="bottom" id="C40-Ee-oEA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FOU-iv-Gl6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5V-PB-e38">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="471"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6h-qy-OqN">
+                                <rect key="frame" x="118" y="518" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yp3-tE-1Ab">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="471"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraImageView" destination="d5V-PB-e38" id="hZr-pM-O7t"/>
+                        <outlet property="takePictureButton" destination="I6h-qy-OqN" id="hM4-6w-9tq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBo-1U-5fL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="750"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -240,6 +285,7 @@
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="Lei-5M-9Gs" id="sCT-F7-F6f"/>
                         <outlet property="grapeDetailLabel" destination="Qu3-d2-85a" id="35e-qh-TSv"/>
+                        <outlet property="imageView" destination="9vs-14-VWz" id="43v-ln-Um6"/>
                         <outlet property="priceDetailLabel" destination="ePo-RI-PQc" id="nL4-Wx-J9J"/>
                         <outlet property="regionDetailLabel" destination="SNN-rM-vrq" id="6xI-A5-FE9"/>
                     </connections>

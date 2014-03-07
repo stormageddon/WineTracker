@@ -14,7 +14,8 @@
 @property (nonatomic,strong) NSString *grapeName;
 @property (nonatomic,strong) NSString *region;
 @property (nonatomic) float price;
+@property (nonatomic,strong) UIImage *image;
 
-- (id)initWithName: (NSString *)name grapeName:(NSString *)grapeName region:(NSString *)region price:(float)price;
+- (id)initWithName: (NSString *)name grapeName:(NSString *)grapeName region:(NSString *)region price:(float)price image:(UIImage *) image;
 
 @end

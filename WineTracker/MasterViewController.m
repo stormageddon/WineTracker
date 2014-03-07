@@ -55,11 +55,10 @@
 
 - (void)insertNewObject:(id)sender newWine:(Wine *) newWine
 {
-    //if (!_objects) {
-    _wineList = [[NSMutableArray alloc] init];
-    //}
-    //[_objects insertObject:[NSDate date] atIndex:0];
-    //[_objects insertObject:[[Wine alloc] initWithName:@"Toasted Head Chardonnay" grapeName:@"Chardonnay" region:@"California, U.S." price:10.0] atIndex:0];
+    if (!_wineList) {
+        _wineList = [[NSMutableArray alloc] init];
+    }
+
     [_wineList insertObject:newWine atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -87,6 +86,11 @@
     cell.wineNameLabel.text = [currWine name];//[object description];
     cell.grapeNameLabel.text = [currWine grapeName];
     cell.regionLabel.text = [currWine region];
+    //cell.imageView = [currWine image];
+    //if ([currWine image] != Nil) {
+    //    [cell.imageView setImage:[currWine image]];
+    //}
+
     return cell;
 }
 

@@ -15,12 +15,14 @@
 - (void)addItemViewController:(WineAddViewController *)controller didFinishSavingItem:(Wine *)item;
 @end
 
-@interface WineAddViewController : UIViewController
+@interface WineAddViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *regionTextField;
 @property (weak, nonatomic) IBOutlet UITextField *grapeNameTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *priceTextField;
 @property (nonatomic, weak) id <WineAddViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIButton *showCameraButton;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

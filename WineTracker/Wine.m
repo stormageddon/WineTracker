@@ -15,12 +15,13 @@
 //NSString *region;
 //float *price;
 
-- (id)initWithName: (NSString *)name grapeName:(NSString *)grapeName region:(NSString *)region price:(float)price {
+- (id)initWithName: (NSString *)name grapeName:(NSString *)grapeName region:(NSString *)region price:(float)price image:(UIImage *)image {
     if ( (self = [super init])) {
         self.name = name;
         self.grapeName  = grapeName;
         self.region = region;
         self.price = price;
+        self.image = image;
     }
     
     return self;
@@ -40,6 +41,7 @@
     [coder encodeObject:self.region forKey:@"region"];
     [coder encodeObject:self.grapeName forKey:@"grapeName"];
     [coder encodeFloat:self.price forKey:@"price"];
+    [coder encodeObject:self.image forKey:@"image"];
     
 //    [coder encodeBool:isBoardGame forKey:@"isBoardGame"];
 //    [coder encodeObject:name    forKey:@"name"];
@@ -53,6 +55,7 @@
     self.region = [coder decodeObjectForKey:@"region"];
     self.grapeName = [coder decodeObjectForKey:@"grapeName"];
     self.price = [coder decodeFloatForKey:@"price"];
+    self.image = [coder decodeObjectForKey:@"image"];
 //    self.isBoardGame = [coder decodeBoolForKey:@"isBoardGame"];
 //    self.name    = [coder decodeObjectForKey:@"name"];
 //    self.players = [coder decodeObjectForKey:@"players"];
