@@ -32,6 +32,7 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
+        self.title = [self.detailItem name];
         self.detailDescriptionLabel.text = [NSString stringWithFormat:@"%@,%@",[self.detailItem name], [self.detailItem region]];
         self.regionDetailLabel.text = [self.detailItem region];
         self.grapeDetailLabel.text = [self.detailItem grapeName];
