@@ -140,9 +140,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eV-5h-Ssf">
-                                <rect key="frame" x="78" y="283" width="165" height="276"/>
+                                <rect key="frame" x="77" y="307" width="166" height="252"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJP-Rh-FB3">
+                                <rect key="frame" x="118" y="274" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraButtonTapped:" destination="5ze-Gf-6zR" eventType="touchUpInside" id="tcX-5X-aQR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <connections>
@@ -159,6 +169,7 @@
                         <outlet property="nameTextField" destination="j4G-lR-Zzc" id="UKG-rA-3KP"/>
                         <outlet property="priceTextField" destination="AGR-xb-dFZ" id="xh3-53-rKq"/>
                         <outlet property="regionTextField" destination="1iO-pL-Dis" id="Odt-rD-kaN"/>
+                        <outlet property="showCameraButton" destination="GJP-Rh-FB3" id="cAf-zf-C5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VND-lv-yYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
