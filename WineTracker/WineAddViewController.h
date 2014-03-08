@@ -22,7 +22,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *grapeNameTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *priceTextField;
 @property (nonatomic, weak) id <WineAddViewControllerDelegate> delegate;
+// @property (weak, nonatomic) IBOutlet UIButton *showCameraButton;
 @property (weak, nonatomic) IBOutlet UIButton *showCameraButton;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)cameraButtonTapped:(id)sender;
 
 @end

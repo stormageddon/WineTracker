@@ -37,12 +37,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction)];
-    self.navigationItem.leftBarButtonItem = saveButton;
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction)];
+    self.navigationItem.leftBarButtonItem = cancelButton;
  
-    UIBarButtonItem *cameraBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePicture:)];
-    [[self navigationItem] setRightBarButtonItem:cameraBarButtonItem];
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction)];
+    self.navigationItem.rightBarButtonItem = saveButton;
     
+}
+
+- (void)cancelAction {
+    NSLog(@"Cancel");
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,21 +72,6 @@
     [self.delegate addItemViewController:self didFinishSavingItem:wineToSave];
 }
 
-- (void)takePicture:(id) sender {
-   
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
-    }
-    else {
-        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-    }
-
-    [imagePicker setDelegate:self];
-    [self presentModalViewController:imagePicker animated:YES];
-}
-
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
@@ -92,4 +82,20 @@
 }
 
 
+- (IBAction)cameraButtonTapped:(id)sender {
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    }
+    else {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    }
+    
+    [imagePicker setDelegate:self];
+    [self presentViewController:imagePicker animated:YES completion:^{
+        NSLog(@"Camera finished");
+    }];
+    //[self presentModalViewController:imagePicker animated:YES];
+}
 @end
