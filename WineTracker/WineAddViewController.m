@@ -9,6 +9,7 @@
 #import "WineAddViewController.h"
 #import "Wine.h"
 #import "CameraControllerViewController.h"
+#import "WineAddNonBasicViewController.h"
 
 @interface WineAddViewController ()
 
@@ -21,13 +22,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
         
-
-        
-//        
-//        UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showAddView)];
-//        self.navigationItem.rightBarButtonItem = addButton;
     }
     return self;
 }
@@ -37,17 +32,46 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.title = [NSString stringWithFormat:@"Basic Information"];
+    
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction)];
     self.navigationItem.leftBarButtonItem = cancelButton;
- 
-    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction)];
-    self.navigationItem.rightBarButtonItem = saveButton;
+// 
+//    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction)];
+//    self.navigationItem.rightBarButtonItem = saveButton;
+    UIBarButtonItem *nextScreenButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(nextScreenAction)];
+    self.navigationItem.rightBarButtonItem = nextScreenButton;
     
 }
 
 - (void)cancelAction {
     NSLog(@"Cancel");
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)nextScreenAction {
+    NSString *wineName = self.nameTextField.text;
+    //NSLog(@"Saving wine: %@",[NSString stringWithFormat:@"Saving wine: %@",wineName]);
+    
+    NSString *grapeName = self.grapeNameTextfield.text;
+    NSString *regionName = self.regionTextField.text;
+    float price = [self.priceTextField.text floatValue];
+    
+    //UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    Wine *wineToSend = [[Wine alloc] initWithName:wineName grapeName:grapeName region:regionName price:price image:[self.imageView image]];
+    
+    WineAddNonBasicViewController *nextScreenController = [self.storyboard instantiateViewControllerWithIdentifier:@"WineAddNonBasicViewController"];
+    nextScreenController.wine = wineToSend;
+    nextScreenController.delegate = self.delegate;
+    //[nextScreenController setView:
+    
+    //[self.navigationController popToViewController:nextScreenController animated:YES];
+    [[self navigationController] pushViewController:nextScreenController animated:YES];
+    
+    
+    //NSString *itemToPassBack = @"Pass this value back to ViewControllerA";
+    //[self.delegate addItemViewController:self didFinishSavingItem:wineToSend];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,8 +101,7 @@
     
     
     [self.imageView setImage:image];
-    
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 
@@ -97,5 +120,12 @@
         NSLog(@"Camera finished");
     }];
     //[self presentModalViewController:imagePicker animated:YES];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"Hide the keyboard");
+    [textField resignFirstResponder];
+    return YES;
 }
 @end

@@ -26,8 +26,10 @@
 		271B4B5018C92DF20037B068 /* ToastedHeadChardonnay-sm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 271B4B4F18C92DF20037B068 /* ToastedHeadChardonnay-sm.jpg */; };
 		271B4B5318C92F6E0037B068 /* WineListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B5218C92F6E0037B068 /* WineListCell.m */; };
 		271B4B5618C939E10037B068 /* WineAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B5518C939E10037B068 /* WineAddViewController.m */; };
-		271B4B5918C93D140037B068 /* AddWineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B5818C93D140037B068 /* AddWineView.m */; };
-		271B4B5C18C96B790037B068 /* CameraControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B4B5B18C96B790037B068 /* CameraControllerViewController.m */; };
+		279F25CC18CC241500F10857 /* WineAddNonBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279F25CB18CC241500F10857 /* WineAddNonBasicViewController.m */; };
+		279F25CF18CC2B0C00F10857 /* AddWineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 279F25CE18CC2B0C00F10857 /* AddWineView.m */; };
+		279F25D218CC2C1700F10857 /* AddAdvancedWine.m in Sources */ = {isa = PBXBuildFile; fileRef = 279F25D118CC2C1700F10857 /* AddAdvancedWine.m */; };
+		279F25D518CD226800F10857 /* TastingListViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279F25D418CD226800F10857 /* TastingListViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +71,14 @@
 		271B4B5218C92F6E0037B068 /* WineListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineListCell.m; sourceTree = "<group>"; };
 		271B4B5418C939E10037B068 /* WineAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineAddViewController.h; sourceTree = "<group>"; };
 		271B4B5518C939E10037B068 /* WineAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineAddViewController.m; sourceTree = "<group>"; };
-		271B4B5718C93D140037B068 /* AddWineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWineView.h; sourceTree = "<group>"; };
-		271B4B5818C93D140037B068 /* AddWineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWineView.m; sourceTree = "<group>"; };
-		271B4B5A18C96B790037B068 /* CameraControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraControllerViewController.h; sourceTree = "<group>"; };
-		271B4B5B18C96B790037B068 /* CameraControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraControllerViewController.m; sourceTree = "<group>"; };
+		279F25CA18CC241500F10857 /* WineAddNonBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineAddNonBasicViewController.h; sourceTree = "<group>"; };
+		279F25CB18CC241500F10857 /* WineAddNonBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineAddNonBasicViewController.m; sourceTree = "<group>"; };
+		279F25CD18CC2B0C00F10857 /* AddWineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWineView.h; sourceTree = "<group>"; };
+		279F25CE18CC2B0C00F10857 /* AddWineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWineView.m; sourceTree = "<group>"; };
+		279F25D018CC2C1700F10857 /* AddAdvancedWine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAdvancedWine.h; sourceTree = "<group>"; };
+		279F25D118CC2C1700F10857 /* AddAdvancedWine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAdvancedWine.m; sourceTree = "<group>"; };
+		279F25D318CD226800F10857 /* TastingListViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TastingListViewViewController.h; sourceTree = "<group>"; };
+		279F25D418CD226800F10857 /* TastingListViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TastingListViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,8 @@
 		271B4B1918C91EC50037B068 /* WineTracker */ = {
 			isa = PBXGroup;
 			children = (
+				279F25CD18CC2B0C00F10857 /* AddWineView.h */,
+				279F25CE18CC2B0C00F10857 /* AddWineView.m */,
 				271B4B4B18C920200037B068 /* Model */,
 				271B4B2218C91EC50037B068 /* AppDelegate.h */,
 				271B4B2318C91EC50037B068 /* AppDelegate.m */,
@@ -146,10 +154,12 @@
 				271B4B5218C92F6E0037B068 /* WineListCell.m */,
 				271B4B5418C939E10037B068 /* WineAddViewController.h */,
 				271B4B5518C939E10037B068 /* WineAddViewController.m */,
-				271B4B5718C93D140037B068 /* AddWineView.h */,
-				271B4B5818C93D140037B068 /* AddWineView.m */,
-				271B4B5A18C96B790037B068 /* CameraControllerViewController.h */,
-				271B4B5B18C96B790037B068 /* CameraControllerViewController.m */,
+				279F25CA18CC241500F10857 /* WineAddNonBasicViewController.h */,
+				279F25CB18CC241500F10857 /* WineAddNonBasicViewController.m */,
+				279F25D018CC2C1700F10857 /* AddAdvancedWine.h */,
+				279F25D118CC2C1700F10857 /* AddAdvancedWine.m */,
+				279F25D318CD226800F10857 /* TastingListViewViewController.h */,
+				279F25D418CD226800F10857 /* TastingListViewViewController.m */,
 			);
 			path = WineTracker;
 			sourceTree = "<group>";
@@ -291,15 +301,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279F25D218CC2C1700F10857 /* AddAdvancedWine.m in Sources */,
+				279F25D518CD226800F10857 /* TastingListViewViewController.m in Sources */,
 				271B4B5318C92F6E0037B068 /* WineListCell.m in Sources */,
 				271B4B4E18C920990037B068 /* Wine.m in Sources */,
+				279F25CC18CC241500F10857 /* WineAddNonBasicViewController.m in Sources */,
 				271B4B2418C91EC50037B068 /* AppDelegate.m in Sources */,
 				271B4B2A18C91EC50037B068 /* MasterViewController.m in Sources */,
+				279F25CF18CC2B0C00F10857 /* AddWineView.m in Sources */,
 				271B4B2018C91EC50037B068 /* main.m in Sources */,
 				271B4B2D18C91EC50037B068 /* DetailViewController.m in Sources */,
 				271B4B5618C939E10037B068 /* WineAddViewController.m in Sources */,
-				271B4B5918C93D140037B068 /* AddWineView.m in Sources */,
-				271B4B5C18C96B790037B068 /* CameraControllerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +520,7 @@
 				271B4B4718C91EC50037B068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		271B4B4818C91EC50037B068 /* Build configuration list for PBXNativeTarget "WineTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +529,7 @@
 				271B4B4A18C91EC50037B068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

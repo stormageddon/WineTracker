@@ -15,7 +15,7 @@
 - (void)addItemViewController:(WineAddViewController *)controller didFinishSavingItem:(Wine *)item;
 @end
 
-@interface WineAddViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface WineAddViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *regionTextField;
