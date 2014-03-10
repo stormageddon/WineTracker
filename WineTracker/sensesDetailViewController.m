@@ -1,21 +1,19 @@
 //
-//  TastingListViewViewController.m
+//  sensesDetailViewController.m
 //  WineTracker
 //
 //  Created by Michael Caputo on 3/9/14.
 //  Copyright (c) 2014 Bad Wolf Inc. All rights reserved.
 //
 
-#import "TastingListViewViewController.h"
+#import "sensesDetailViewController.h"
 #import "Wine.h"
 
-@interface TastingListViewViewController ()
-
-@property NSMutableArray *selectedItems;
+@interface sensesDetailViewController ()
 
 @end
 
-@implementation TastingListViewViewController
+@implementation sensesDetailViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,11 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction)];
-    self.navigationItem.rightBarButtonItem = saveButton;
-    
-    self.selectedItems = [[NSMutableArray alloc] init];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -41,82 +34,68 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-   
-}
-
-- (void)saveAction {
-    
-            // Sight
-            if ([self.title isEqualToString:@"Sight"]) {
-                self.wine.sights = self.selectedItems;
-            }
-            // Smell
-            else if ([self.title isEqualToString:@"Smell"]) {
-                self.wine.smells = self.selectedItems;
-            }
-            // Taste
-            else if ([self.title isEqualToString:@"Taste"]) {
-                self.wine.tastes = self.selectedItems;
-           }
-   
-    
-    //self.wine.smells = self.selectedItems;
-    //NSLog(@"Number of selected items:%d", self.selectedItems.count);
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if([tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark){
-        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
-        if([self.selectedItems containsObject:[tableView cellForRowAtIndexPath:indexPath]]) {
-            [self.selectedItems removeObject:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
-        }
-    }else{
-        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
-
-        [self.selectedItems addObject:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
-        NSLog(@"selected: %d", self.selectedItems.count);
-    }
+    self.title = @"Tasting information";
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
     // Return the number of sections.
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //if (section == 0) {
-    //    return self.item
-    //}
-    return self.itemList.count;
+    // Return the number of rows in the section.
+    //return (self.detailItem.smells.count + self.detailItem.sights.count + self.detailItem.tastes.count);
+    //return self.detailItem.smells.count;
+    if( section == 0) {
+        return self.detailItem.sights.count;
+    }
+    else if( section == 1) {
+        return self.detailItem.smells.count;
+    }
+    
+    return self.detailItem.tastes.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if(section == 0)
+    {
+        return @"Sight";
+    }
+    else if(section == 1)
+    {
+        return @"Smell";
+    }
+    else
+    {
+        return @"Taste";
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"SenseItemTitle";
+    static NSString *CellIdentifier = @"senseDetailCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-//    if (indexPath.section == 0) {
-//        cell.textLabel.text = self.wine.sights[indexPath.row];
-//    }
-//    else if (indexPath.section == 1) {
-//        cell.textLabel.text = self.wine.smells[indexPath.row];
-//    }
-//    else {
-//        cell.textLabel.text = self.wine.tastes[indexPath.row];
-//    }
-    cell.textLabel.text = self.itemList[indexPath.row];
     
     // Configure the cell...
     
+    if (indexPath.section == 0) {
+        cell.textLabel.text = self.detailItem.sights[indexPath.row];
+    }
+    else if (indexPath.section == 1) {
+        cell.textLabel.text = self.detailItem.smells[indexPath.row];
+    }
+    else {
+        cell.textLabel.text = self.detailItem.tastes[indexPath.row];
+    }
+    //cell.textLabel.text = self.detailItem.smells[indexPath.row];
+    
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.

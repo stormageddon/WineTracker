@@ -42,6 +42,14 @@
     UIBarButtonItem *nextScreenButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(nextScreenAction)];
     self.navigationItem.rightBarButtonItem = nextScreenButton;
     
+    self.saveButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.saveButton addTarget:self action:@selector(saveWineAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    //self.saveButton = [[UIButton buttonWithType:UIButtonTypeRoundedRect] targetForAction:@selector(saveAction) withSender:UIControlEventTouchUpInside] ;
+    //[myButton addTarget:something action:@selector(myAction) forControlEvents:UIControlEventTouchUpInside];
+    //self.saveButton = [[UIButton buttonWithType:UIButtonTypeRoundedRect] targetForAction:@selector(saveAction) withSender:self];
+    
+    
 }
 
 - (void)cancelAction {
@@ -59,10 +67,13 @@
     
     //UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    Wine *wineToSend = [[Wine alloc] initWithName:wineName grapeName:grapeName region:regionName price:price image:[self.imageView image]];
+    self.wine = [[Wine alloc] initWithName:wineName grapeName:grapeName region:regionName price:price image:[self.imageView image]];
+    
+     NSLog(@"Wine: %@",self.wine);
     
     WineAddNonBasicViewController *nextScreenController = [self.storyboard instantiateViewControllerWithIdentifier:@"WineAddNonBasicViewController"];
-    nextScreenController.wine = wineToSend;
+    [nextScreenController setWine:self.wine];
+     NSLog(@"Next wine: %@",nextScreenController.wine);
     nextScreenController.delegate = self.delegate;
     //[nextScreenController setView:
     
@@ -80,20 +91,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)saveAction {
-    NSString *wineName = self.nameTextField.text;
-    //NSLog(@"Saving wine: %@",[NSString stringWithFormat:@"Saving wine: %@",wineName]);
-    
-    NSString *grapeName = self.grapeNameTextfield.text;
-    NSString *regionName = self.regionTextField.text;
-    float price = [self.priceTextField.text floatValue];
+- (void)saveWineAction {
+//    NSString *wineName = self.nameTextField.text;
+//    NSLog(@"Saving wine: %@",[NSString stringWithFormat:@"Saving wine: %@",self.wine.smells]);
+//    
+//    NSString *grapeName = self.grapeNameTextfield.text;
+//    NSString *regionName = self.regionTextField.text;
+//    float price = [self.priceTextField.text floatValue];
     
     //UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    Wine *wineToSave = [[Wine alloc] initWithName:wineName grapeName:grapeName region:regionName price:price image:[self.imageView image]];
+    //self.wine = [[Wine alloc] initWithName:wineName grapeName:grapeName region:regionName price:price image:[self.imageView image]];
+    
+   // wineToSave.smells =
     
     //NSString *itemToPassBack = @"Pass this value back to ViewControllerA";
-    [self.delegate addItemViewController:self didFinishSavingItem:wineToSave];
+    [self.delegate addItemViewController:self didFinishSavingItem:self.wine];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -120,6 +134,10 @@
         NSLog(@"Camera finished");
     }];
     //[self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)saveButtonTapped:(id)sender {
+    [self saveWineAction];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

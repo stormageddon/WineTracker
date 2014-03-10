@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Wine;
 
 @interface TastingListViewViewController : UITableViewController
 
-@property NSArray *itemList;
-@property NSString *title;
+@property (nonatomic, copy)NSArray *itemList;
+@property (nonatomic, copy)NSString *title;
+@property (nonatomic, strong)Wine *wine;
 
 @end

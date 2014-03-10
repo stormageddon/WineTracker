@@ -30,6 +30,7 @@
 		279F25CF18CC2B0C00F10857 /* AddWineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 279F25CE18CC2B0C00F10857 /* AddWineView.m */; };
 		279F25D218CC2C1700F10857 /* AddAdvancedWine.m in Sources */ = {isa = PBXBuildFile; fileRef = 279F25D118CC2C1700F10857 /* AddAdvancedWine.m */; };
 		279F25D518CD226800F10857 /* TastingListViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279F25D418CD226800F10857 /* TastingListViewViewController.m */; };
+		279F25D818CD426900F10857 /* sensesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279F25D718CD426900F10857 /* sensesDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		279F25D118CC2C1700F10857 /* AddAdvancedWine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAdvancedWine.m; sourceTree = "<group>"; };
 		279F25D318CD226800F10857 /* TastingListViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TastingListViewViewController.h; sourceTree = "<group>"; };
 		279F25D418CD226800F10857 /* TastingListViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TastingListViewViewController.m; sourceTree = "<group>"; };
+		279F25D618CD426900F10857 /* sensesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sensesDetailViewController.h; sourceTree = "<group>"; };
+		279F25D718CD426900F10857 /* sensesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sensesDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 				279F25D118CC2C1700F10857 /* AddAdvancedWine.m */,
 				279F25D318CD226800F10857 /* TastingListViewViewController.h */,
 				279F25D418CD226800F10857 /* TastingListViewViewController.m */,
+				279F25D618CD426900F10857 /* sensesDetailViewController.h */,
+				279F25D718CD426900F10857 /* sensesDetailViewController.m */,
 			);
 			path = WineTracker;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				271B4B4E18C920990037B068 /* Wine.m in Sources */,
 				279F25CC18CC241500F10857 /* WineAddNonBasicViewController.m in Sources */,
 				271B4B2418C91EC50037B068 /* AppDelegate.m in Sources */,
+				279F25D818CD426900F10857 /* sensesDetailViewController.m in Sources */,
 				271B4B2A18C91EC50037B068 /* MasterViewController.m in Sources */,
 				279F25CF18CC2B0C00F10857 /* AddWineView.m in Sources */,
 				271B4B2018C91EC50037B068 /* main.m in Sources */,

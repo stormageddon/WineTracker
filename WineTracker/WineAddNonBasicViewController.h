@@ -10,13 +10,15 @@
 
 @class Wine;
 @class WineAddViewController;
+@class WineAddNonBasicViewController;
 
 @protocol WineAddViewControllerDelegate;
 
 @interface WineAddNonBasicViewController : UITableViewController
 
-@property (nonatomic, weak) Wine *wine;
+@property (nonatomic, strong) Wine *wine;
 @property (nonatomic, weak) id <WineAddViewControllerDelegate> delegate;
+
 @property (weak, nonatomic) IBOutlet UITextField *grapeNameTextfield;
 
 @end

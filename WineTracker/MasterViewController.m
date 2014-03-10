@@ -47,12 +47,6 @@
     [[self navigationController] pushViewController:controller animated:YES];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)insertNewObject:(id)sender newWine:(Wine *) newWine
 {
     if (!_wineList) {
@@ -60,6 +54,7 @@
     }
 
     [_wineList insertObject:newWine atIndex:0];
+    NSLog(@"New wine: %@", newWine.smells);
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -152,12 +147,13 @@
 
 - (void)addItemViewController:(WineAddViewController *)controller didFinishSavingItem:(Wine *)item
 {
-    NSLog(@"This was returned from ViewControllerB %@",item);
+    NSLog(@"This was returned from ViewControllerB %@",item.smells);
     [self insertNewObject:self newWine:item];
     
-    [self saveWine];
-    
-//    [[self navigationController] pushViewController:self animated:YES];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self saveWine];
+    });
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 

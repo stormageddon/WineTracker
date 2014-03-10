@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "Wine.h"
+#import "sensesDetailViewController.h"
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -39,6 +40,8 @@
         self.priceDetailLabel.text = [NSString stringWithFormat:@"$%.2f",[self.detailItem price]];
         [self.imageView setImage:[self.detailItem image]];
         
+        NSLog(@"Wine smells: %@", self.detailItem.smells);
+        
     }
 }
 
@@ -46,13 +49,30 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    UIBarButtonItem *tasteDetailButton = [[UIBarButtonItem alloc] initWithTitle:@"Taste Detail" style:UIBarButtonItemStylePlain target:self action:@selector(showDetailView)];
+    self.navigationItem.rightBarButtonItem = tasteDetailButton;
+    
     [self configureView];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)showDetailView {
+    
+    sensesDetailViewController *nextScreenController = [self.storyboard instantiateViewControllerWithIdentifier:@"sensesDetailViewController"];
+    [nextScreenController setDetailItem:self.detailItem];
+    
+    [[self navigationController] pushViewController:nextScreenController animated:YES];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"sensesDetailSegue"]) {
+        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        [[segue destinationViewController] setDetailItem:self.detailItem];
+    }
+}
+
 
 @end

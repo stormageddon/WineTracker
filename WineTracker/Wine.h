@@ -15,6 +15,10 @@
 @property (nonatomic,strong) NSString *region;
 @property (nonatomic) float price;
 @property (nonatomic,strong) UIImage *image;
+@property (nonatomic,strong) NSMutableArray *smells;
+@property (nonatomic,strong) NSMutableArray *sights;
+@property (nonatomic,strong) NSMutableArray *tastes;
+
 
 - (id)initWithName: (NSString *)name grapeName:(NSString *)grapeName region:(NSString *)region price:(float)price image:(UIImage *) image;
 

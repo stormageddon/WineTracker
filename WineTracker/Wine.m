@@ -10,11 +10,6 @@
 
 @implementation Wine
 
-//NSString *name;
-//NSString *grapeName;
-//NSString *region;
-//float *price;
-
 - (id)initWithName: (NSString *)name grapeName:(NSString *)grapeName region:(NSString *)region price:(float)price image:(UIImage *)image {
     if ( (self = [super init])) {
         self.name = name;
@@ -27,14 +22,6 @@
     return self;
 }
 
-//- (id)initWithMapName:(NSString *)name player:(Trainer *)player;
-//
-//{
-//    if ( (self = [super init]) ) {
-//
-//    }
-//}
-
 
 - (void)encodeWithCoder:(NSCoder *)coder {
     [coder encodeObject:self.name forKey:@"name"];
@@ -42,11 +29,9 @@
     [coder encodeObject:self.grapeName forKey:@"grapeName"];
     [coder encodeFloat:self.price forKey:@"price"];
     [coder encodeObject:self.image forKey:@"image"];
-    
-//    [coder encodeBool:isBoardGame forKey:@"isBoardGame"];
-//    [coder encodeObject:name    forKey:@"name"];
-//    [coder encodeObject:players forKey:@"players"];
-//    [coder encodeObject:ogres   forKey:@"ogres"];
+    [coder encodeObject:self.sights forKey:@"sights"];
+    [coder encodeObject:self.smells forKey:@"smells"];
+    [coder encodeObject:self.tastes forKey:@"tastes"];
 }
 
 - (id)initWithCoder:(NSCoder *)coder {
@@ -56,11 +41,10 @@
     self.grapeName = [coder decodeObjectForKey:@"grapeName"];
     self.price = [coder decodeFloatForKey:@"price"];
     self.image = [coder decodeObjectForKey:@"image"];
-//    self.isBoardGame = [coder decodeBoolForKey:@"isBoardGame"];
-//    self.name    = [coder decodeObjectForKey:@"name"];
-//    self.players = [coder decodeObjectForKey:@"players"];
-//    NSDictionary *ogreDict = [coder decodeObjectForKey:@"ogres"];
-//    self.ogres   = [[NSMutableDictionary alloc] initWithDictionary:ogreDict copyItems:YES];
+    self.sights = [coder decodeObjectForKey:@"sights"];
+    self.smells = [coder decodeObjectForKey:@"smells"];
+    self.tastes = [coder decodeObjectForKey:@"tastes"];
+    
     return self;
 }
     
