@@ -29,5 +29,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 - (IBAction)cameraButtonTapped:(id)sender;
 - (IBAction)saveButtonTapped:(id)sender;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *buyAgainSegmentedControl;
 
 @end

@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *regionDetailLabel;
 @property (weak, nonatomic) IBOutlet UILabel *grapeDetailLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceDetailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *buyAgainLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

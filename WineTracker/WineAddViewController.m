@@ -67,7 +67,15 @@
     
     //UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    self.wine = [[Wine alloc] initWithName:wineName grapeName:grapeName region:regionName price:price image:[self.imageView image]];
+    if( self.buyAgainSegmentedControl.selectedSegmentIndex == 0) {
+        [self.wine setBuyAgain:YES];
+    }
+    else {
+        [self.wine setBuyAgain:NO];
+    }
+    //[self.wine setBuyAgain: self.buyAgainSegmentedControl.selectedSegmentIndex];
+    
+    self.wine = [[Wine alloc] initWithName:wineName grapeName:grapeName region:regionName price:price image:[self.imageView image] buyAgain:(self.buyAgainSegmentedControl.selectedSegmentIndex == 0)];
     
      NSLog(@"Wine: %@",self.wine);
     

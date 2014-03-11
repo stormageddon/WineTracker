@@ -40,6 +40,10 @@
         self.priceDetailLabel.text = [NSString stringWithFormat:@"$%.2f",[self.detailItem price]];
         [self.imageView setImage:[self.detailItem image]];
         
+        if( [self.detailItem buyAgain] == NO ) {
+            self.buyAgainLabel.text = @"Don't buy....";
+        }
+        
         NSLog(@"Wine smells: %@", self.detailItem.smells);
         
     }

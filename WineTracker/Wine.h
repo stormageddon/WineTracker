@@ -18,8 +18,9 @@
 @property (nonatomic,strong) NSMutableArray *smells;
 @property (nonatomic,strong) NSMutableArray *sights;
 @property (nonatomic,strong) NSMutableArray *tastes;
+@property (nonatomic, assign) BOOL buyAgain;
 
 
-- (id)initWithName: (NSString *)name grapeName:(NSString *)grapeName region:(NSString *)region price:(float)price image:(UIImage *) image;
+- (id)initWithName: (NSString *)name grapeName:(NSString *)grapeName region:(NSString *)region price:(float)price image:(UIImage *) image buyAgain:(BOOL) buyAgain;
 
 @end
